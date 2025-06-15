@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Query
-from parser.query_parser import parse_query
-from job_api.careerjet import search_careerjet_jobs
-from job_api.jooble import search_jooble_jobs
+from backend.parser.query_parser import parse_query
+from backend.job_api.careerjet import search_careerjet_jobs
+from backend.job_api.jooble import search_jooble_jobs
+
 
 app = FastAPI()
 @app.get("/")
