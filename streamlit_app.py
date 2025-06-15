@@ -9,7 +9,7 @@ query = st.text_input("Enter your job query", placeholder="e.g., AI Engineer in 
 if st.button("Search Jobs") and query:
     try:
         with st.spinner("Searching jobs..."):
-            response = requests.get("http://127.0.0.1:8000/search_jobs", params={"query": query})
+            response = requests.get("https://chatbot-jobfinder-1.onrender.com/search_jobs", params={"query": query})
             data = response.json()
 
             st.subheader("🔍 Parsed Query")
